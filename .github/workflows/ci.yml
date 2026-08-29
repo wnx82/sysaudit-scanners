@@ -40,10 +40,16 @@ jobs:
         run: npm run lint
       - name: Typecheck
         run: npm run typecheck
-      - name: Tests
-        run: npm test
+      # Le build **précède** les tests, et ce n'est pas un détail d'ordre :
+      # `scanner-bounds.test.ts` lit `packages/report-schema/schema/`, un
+      # artefact produit par le build. Tests d'abord, la suite échoue en
+      # ENOENT sur un runner neuf — ce qui est arrivé à la première exécution
+      # de cette CI, alors que tout passait en local où le schéma traînait
+      # d'une construction précédente.
       - name: Build
         run: npm run build
+      - name: Tests
+        run: npm test
 
   scanner-linux:
     name: Scanner Linux — ShellCheck et suite
