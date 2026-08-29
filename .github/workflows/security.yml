@@ -1,0 +1,74 @@
+# Contrôles de sécurité du dépôt public.
+#
+# Séparés de la CI à dessein : un rouge ici ne dit pas « le code est cassé »,
+# il dit « quelque chose ne doit pas être publié ». Les deux verdicts ne se
+# lisent pas de la même façon et ne se traitent pas par les mêmes gestes.
+name: Sécurité
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Un secret publié par erreur ne se signale pas tout seul : le contrôle
+    # repasse chaque lundi, même sans commit.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contenu-interdit:
+    name: Contenu interdit et secrets suivis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # L'historique complet : un secret retiré au dernier commit reste
+          # dans les précédents, et c'est précisément ce qu'on cherche.
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Contenu interdit
+        env:
+          # Domaines, hostnames et préfixes réseau réellement internes. Ils ne
+          # peuvent pas figurer dans le script : les y écrire publierait ce
+          # qu'ils servent à protéger.
+          SYSAUDIT_FORBIDDEN_PATTERNS: ${{ secrets.SYSAUDIT_FORBIDDEN_PATTERNS }}
+        run: node scripts/scan-forbidden-content.mjs .
+
+      - name: Aucun fichier d'identifiants suivi
+        run: |
+          if git ls-files | grep -Ei '(^|/)(google-.*|service-account.*|.*-credentials|credentials|secrets)\.json$'; then
+            echo "::error::Un fichier d'identifiants est suivi par Git."
+            exit 1
+          fi
+          echo "Aucun fichier d'identifiants suivi."
+
+      - name: Aucun .env réel suivi
+        run: |
+          if git ls-files | grep -E '(^|/)\.env' | grep -v '\.example$'; then
+            echo "::error::Un fichier .env réel est suivi par Git."
+            exit 1
+          fi
+          echo "Aucun .env réel suivi."
+
+  dependances:
+    name: Audit des dépendances
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: npm audit
+        run: npm audit --audit-level=high

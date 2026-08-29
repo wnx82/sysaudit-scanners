@@ -1,0 +1,2093 @@
+{
+  "schemaVersion": "1.33.0",
+  "scannerVersion": "0.1.0",
+  "platformVersion": "0.1.0",
+  "report": {
+    "localId": "scan-2026-07-25-164200",
+    "generatedAt": "2026-07-25T16:42:00Z",
+    "durationMs": 8420,
+    "scannerKind": "proxmox",
+    "profile": "full",
+    "anonymized": false,
+    "anonymizedCategories": []
+  },
+  "capabilities": {
+    "platform": "linux",
+    "distribution": "Debian",
+    "architecture": "x86_64",
+    "privileged": true,
+    "proxmox": true,
+    "docker": true,
+    "tools": {
+      "dmidecode": true,
+      "smartctl": true,
+      "lspci": true,
+      "lsusb": true,
+      "sensors": true,
+      "nvme": true,
+      "ip": true,
+      "pvesh": true,
+      "docker": true
+    },
+    "features": {
+      "events": "AVAILABLE",
+      "boot": "AVAILABLE",
+      "shutdown": "AVAILABLE",
+      "stability.hardwareErrors": "NOT_AVAILABLE",
+      "boot.fastStartupEnabled": "NOT_APPLICABLE",
+      "monitoring.aggregates": "AVAILABLE"
+    }
+  },
+  "system": {
+    "hostname": "demo-host",
+    "fqdn": "pve-lab.cabinet.lan",
+    "domain": "demo.invalid",
+    "workgroup": {
+      "unknown": true,
+      "reason": "UNSUPPORTED",
+      "detail": "notion propre à Windows"
+    },
+    "manufacturer": "ASUSTeK COMPUTER INC.",
+    "model": "PRIME B550-PLUS",
+    "chassisType": "desktop",
+    "uuid": "00000000-0000-0000-0000-000000000000",
+    "serialNumber": "DEMO-000000",
+    "assetTag": "POSTE-COMPTA-014",
+    "machineGuid": {
+      "unknown": true,
+      "reason": "UNSUPPORTED",
+      "detail": "notion propre à Windows"
+    },
+    "machineSid": {
+      "unknown": true,
+      "reason": "UNSUPPORTED",
+      "detail": "notion propre à Windows"
+    },
+    "architecture": "x86_64",
+    "uptimeSeconds": 1209600,
+    "timezone": "Europe/Brussels",
+    "localTime": "2026-07-25T18:42:00+02:00"
+  },
+  "os": {
+    "family": "linux",
+    "name": "Debian GNU/Linux",
+    "edition": {
+      "unknown": true,
+      "reason": "UNSUPPORTED"
+    },
+    "distribution": "Debian",
+    "version": "12",
+    "build": {
+      "unknown": true,
+      "reason": "NOT_AVAILABLE"
+    },
+    "kernel": "6.8.12-4-pve",
+    "architecture": "x86_64",
+    "installDate": "2024-03-14",
+    "locale": "fr_BE.UTF-8",
+    "timezone": "Europe/Brussels",
+    "support": {
+      "status": "SUPPORTED",
+      "endOfLife": "2028-06-30",
+      "confidence": "HIGH",
+      "source": {
+        "name": "Debian Security Team",
+        "title": "Debian Long Term Support",
+        "url": "https://wiki.debian.org/LTS",
+        "checkedAt": "2026-07-25T16:42:00Z"
+      }
+    }
+  },
+  "motherboard": {
+    "manufacturer": "ASUSTeK COMPUTER INC.",
+    "model": "PRIME B550-PLUS",
+    "revision": "Rev X.0x",
+    "serialNumber": "DEMO-000000",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memorySlots": 4
+  },
+  "bios": {
+    "manufacturer": "American Megatrends Inc.",
+    "version": "2803",
+    "releaseDate": "2024-11-08",
+    "mode": "UEFI",
+    "secureBoot": "DISABLED",
+    "smbiosVersion": "3.3"
+  },
+  "cpus": [
+    {
+      "manufacturer": "AMD",
+      "model": "AMD Ryzen 7 5700X 8-Core Processor",
+      "family": "Zen 3",
+      "generation": {
+        "unknown": true,
+        "reason": "UNKNOWN",
+        "detail": "génération commerciale non déterminable de façon fiable"
+      },
+      "socket": "AM4",
+      "physicalCores": 8,
+      "logicalCores": 16,
+      "baseFrequencyMhz": 3400,
+      "maxFrequencyMhz": 4600,
+      "currentFrequencyMhz": 2200,
+      "cacheBytes": {
+        "l1": 524288,
+        "l2": 4194304,
+        "l3": 33554432
+      },
+      "instructionSets": ["sse4_2", "avx", "avx2", "aes"],
+      "virtualization": {
+        "supported": true,
+        "enabled": true,
+        "technology": "AMD-V"
+      },
+      "temperatureCelsius": 42.5,
+      "usagePercent": 12.4
+    }
+  ],
+  "memory": {
+    "modules": [
+      {
+        "slot": "DIMM_A2",
+        "sizeBytes": 17179869184,
+        "manufacturer": "Kingston",
+        "partNumber": "KF3200C16D4/16GX",
+        "serialNumber": "DEMO-000000",
+        "type": "DDR4",
+        "ratedSpeedMts": 3200,
+        "configuredSpeedMts": 3200,
+        "voltage": 1.2,
+        "ecc": false,
+        "formFactor": "DIMM"
+      },
+      {
+        "slot": "DIMM_B2",
+        "sizeBytes": 17179869184,
+        "manufacturer": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE",
+          "detail": "champ SMBIOS non programmé"
+        },
+        "partNumber": "CT16G4SFRA32A.M16FRS",
+        "serialNumber": "DEMO-000000",
+        "type": "DDR4",
+        "ratedSpeedMts": 3200,
+        "configuredSpeedMts": 3200,
+        "voltage": 1.2,
+        "ecc": false,
+        "formFactor": "DIMM"
+      }
+    ],
+    "installedBytes": 34359738368,
+    "availableBytes": 12884901888,
+    "slotsTotal": 4,
+    "slotsUsed": 2,
+    "maxCapacityBytes": 137438953472,
+    "swapTotalBytes": 8589934592,
+    "swapUsedBytes": 0
+  },
+  "gpus": [
+    {
+      "vendor": "NVIDIA",
+      "model": "GeForce RTX 2060",
+      "pciId": "10de:1f08",
+      "vramBytes": 6442450944,
+      "driver": "nvidia",
+      "driverVersion": "550.127.05",
+      "driverDate": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "temperatureCelsius": 38,
+      "usagePercent": 0,
+      "coreClockMhz": 300,
+      "memoryClockMhz": 405,
+      "displays": [
+        {
+          "name": "DP-1",
+          "manufacturer": "DEL",
+          "model": "DELL U2720Q",
+          "serialNumber": "DEMO-000000",
+          "resolution": "3840x2160",
+          "refreshRateHz": 60,
+          "connection": "DP"
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "devices": [
+      {
+        "name": "HDA Intel PCH",
+        "vendor": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "driver": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "stack": "alsa",
+        "kind": "PLAYBACK_CAPTURE",
+        "state": "ENABLED",
+        "default": {
+          "unknown": true,
+          "reason": "UNKNOWN"
+        }
+      }
+    ]
+  },
+  "sensors": {
+    "temperatures": [
+      {
+        "label": "Tctl",
+        "celsius": 42.5,
+        "criticalCelsius": 95,
+        "category": "CPU",
+        "device": "AMD Ryzen 7 5800X",
+        "source": "hwmon",
+        "sourcePath": "/sys/class/hwmon/hwmon2/temp1_input",
+        "scope": "LOCAL",
+        "quality": "MEASURED",
+        "minCelsius": 41.8,
+        "averageCelsius": 42.2,
+        "maxCelsius": 42.5,
+        "sampleCount": 3,
+        "rawValue": 42500,
+        "rawUnit": "millidegree_celsius"
+      },
+      {
+        "label": "Composite",
+        "celsius": 51,
+        "category": "DRIVE_NVME",
+        "device": "Samsung SSD 990 PRO 2TB",
+        "source": "NVMe SMART",
+        "quality": "MEASURED"
+      }
+    ],
+    "temperatureCollection": {
+      "probed": 14,
+      "usable": 2,
+      "discarded": 1,
+      "sources": ["hwmon", "NVMe SMART"],
+      "sampleCount": 3,
+      "sampleIntervalMs": 1000,
+      "discardedReadings": [
+        {
+          "label": "temp3",
+          "source": "hwmon",
+          "sourcePath": "/sys/class/hwmon/hwmon0/temp3_input",
+          "rawValue": -127000,
+          "rawUnit": "millidegree_celsius",
+          "celsius": -127,
+          "reason": "OUT_OF_PHYSICAL_RANGE"
+        }
+      ]
+    },
+    "fans": [
+      {
+        "label": "fan1",
+        "rpm": 980
+      }
+    ],
+    "voltages": [
+      {
+        "label": "+12V",
+        "volts": 12.096
+      }
+    ],
+    "powers": []
+  },
+  "power": {
+    "batteries": [
+      {
+        "name": "BAT0",
+        "manufacturer": "LGC",
+        "model": "5B10W13930",
+        "serialNumber": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "technology": "Li-poly",
+        "chargePercent": 87,
+        "status": "DISCHARGING",
+        "designCapacityWh": 57,
+        "fullChargeCapacityWh": 43.12,
+        "cycleCount": 412,
+        "voltageVolts": 11.52
+      }
+    ],
+    "acConnected": false,
+    "powerSupply": {
+      "detected": false,
+      "type": "UNKNOWN",
+      "units": [],
+      "rails": [
+        {
+          "label": "+12V",
+          "volts": 12.096,
+          "measuredBy": "MOTHERBOARD",
+          "source": "HWMON",
+          "chip": "nct6798",
+          "sourcePath": "/sys/class/hwmon/hwmon1/in0_input"
+        },
+        {
+          "label": "+5V",
+          "volts": 5.04,
+          "measuredBy": "MOTHERBOARD",
+          "source": "HWMON",
+          "chip": "nct6798",
+          "sourcePath": "/sys/class/hwmon/hwmon1/in1_input"
+        },
+        {
+          "label": "+3.3V",
+          "volts": 3.312,
+          "measuredBy": "MOTHERBOARD",
+          "source": "HWMON",
+          "chip": "nct6798",
+          "sourcePath": "/sys/class/hwmon/hwmon1/in2_input"
+        }
+      ],
+      "componentPower": [
+        {
+          "label": "package-0",
+          "component": "CPU",
+          "watts": 31.4,
+          "source": "RAPL",
+          "device": "AMD Ryzen 7 5800X",
+          "windowMs": 300,
+          "sourcePath": "/sys/class/powercap/intel-rapl:0/energy_uj"
+        },
+        {
+          "label": "GPU",
+          "component": "GPU",
+          "watts": 52,
+          "source": "HWMON",
+          "device": "AMD Radeon RX 6700 XT"
+        }
+      ],
+      "sources": ["SYSFS_POWER_SUPPLY", "HWMON", "RAPL"],
+      "limitations": ["SMBIOS_TYPE_39_ABSENT", "ATX_NOT_SELF_DESCRIBING", "RAILS_FROM_MOTHERBOARD"]
+    }
+  },
+  "storage": {
+    "disks": [
+      {
+        "device": "/dev/nvme0n1",
+        "manufacturer": "Samsung",
+        "model": "Samsung SSD 980 PRO 1TB",
+        "serialNumber": "DEMO-000000",
+        "wwn": "0x5002538e40a1b2c3",
+        "nguid": "00000000000000000026b7683d5a1f2e",
+        "eui64": "0026b7683d5a1f2e",
+        "firmware": "5B2QGXA7",
+        "sizeBytes": 1000204886016,
+        "kind": "NVME",
+        "mediaType": "SSD",
+        "busType": "NVME",
+        "protocol": "NVMe",
+        "interface": "nvme",
+        "rotationRpm": {
+          "unknown": true,
+          "reason": "UNSUPPORTED",
+          "detail": "sans objet pour un SSD"
+        },
+        "partitionTable": "GPT",
+        "removable": false,
+        "trimSupported": true,
+        "link": {
+          "currentSpeed": "16.0 GT/s PCIe",
+          "maxSpeed": "16.0 GT/s PCIe",
+          "currentWidth": 4,
+          "maxWidth": 4
+        },
+        "smart": {
+          "status": "PASSED",
+          "temperatureCelsius": 51,
+          "powerOnHours": 18240,
+          "powerCycles": 412,
+          "reallocatedSectors": {
+            "unknown": true,
+            "reason": "UNSUPPORTED",
+            "detail": "attribut ATA sans équivalent NVMe"
+          },
+          "pendingSectors": {
+            "unknown": true,
+            "reason": "UNSUPPORTED"
+          },
+          "uncorrectableErrors": 0,
+          "wearPercent": {
+            "unknown": true,
+            "reason": "NOT_AVAILABLE"
+          },
+          "nvmePercentageUsed": 87,
+          "availableSparePercent": 32,
+          "availableSpareThresholdPercent": 10,
+          "mediaErrors": 0,
+          "unsafeShutdowns": 3,
+          "dataUnitsRead": 286114552,
+          "dataUnitsWritten": 412884221
+        },
+        "partitions": [
+          {
+            "name": "/dev/nvme0n1p2",
+            "uuid": "00000000-0000-0000-0000-000000000000",
+            "partitionUuid": "00000000-0000-0000-0000-000000000000",
+            "mountPoint": "/",
+            "filesystem": "ext4",
+            "sizeBytes": 100000000000,
+            "usedBytes": 93000000000,
+            "freeBytes": 7000000000,
+            "usagePercent": 93,
+            "encrypted": false,
+            "encryptionType": {
+              "unknown": true,
+              "reason": "UNSUPPORTED"
+            }
+          }
+        ]
+      }
+    ],
+    "trimScheduled": false,
+    "pools": [
+      {
+        "name": "rpool",
+        "type": "zfs",
+        "state": "ONLINE",
+        "sizeBytes": 2000398934016,
+        "usedBytes": 812000000000,
+        "members": ["/dev/sda", "/dev/sdb"],
+        "raidLevel": "mirror",
+        "redundant": true
+      },
+      {
+        "name": "md0",
+        "type": "md",
+        "state": "active",
+        "sizeBytes": 4000797868032,
+        "usedBytes": {
+          "unknown": true,
+          "reason": "UNSUPPORTED"
+        },
+        "members": ["/dev/sdc", "/dev/sdd"],
+        "raidLevel": "raid0",
+        "redundant": false
+      }
+    ],
+    "totalBytes": 3000603820032,
+    "usedBytes": 905000000000
+  },
+  "network": {
+    "interfaces": [
+      {
+        "name": "enp4s0",
+        "manufacturer": "Realtek Semiconductor Co., Ltd.",
+        "model": "RTL8125 2.5GbE Controller",
+        "mac": "00:00:5e:00:53:00",
+        "type": "ethernet",
+        "status": "UP",
+        "speedMbps": 2500,
+        "duplex": "FULL",
+        "mtu": 1500,
+        "driver": "r8169",
+        "dhcp": false,
+        "ipv4": [
+          {
+            "address": "192.0.2.10",
+            "prefixLength": 24
+          }
+        ],
+        "ipv6": [
+          {
+            "address": "fe80::21a:2bff:fe3c:4d5e",
+            "prefixLength": 64
+          }
+        ],
+        "gateway": "192.0.2.1"
+      }
+    ],
+    "dnsServers": ["192.0.2.1"],
+    "searchDomains": ["demo.invalid"],
+    "publicIp": "192.0.2.10",
+    "routes": [
+      {
+        "destination": "default",
+        "gateway": "192.0.2.1",
+        "interface": "enp4s0",
+        "metric": 100
+      },
+      {
+        "destination": "default",
+        "gateway": "192.0.2.1",
+        "interface": "wlp3s0",
+        "metric": 600
+      },
+      {
+        "destination": "192.0.2.0/24",
+        "gateway": {
+          "unknown": true,
+          "reason": "UNSUPPORTED"
+        },
+        "interface": "enp4s0",
+        "metric": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        }
+      }
+    ],
+    "listeningPorts": [
+      {
+        "protocol": "tcp",
+        "port": 22,
+        "address": "192.0.2.10",
+        "process": "sshd",
+        "exposed": true
+      },
+      {
+        "protocol": "tcp",
+        "port": 8006,
+        "address": "192.0.2.10",
+        "process": "pveproxy",
+        "exposed": true
+      },
+      {
+        "protocol": "tcp",
+        "port": 5432,
+        "address": "192.0.2.10",
+        "process": "postgres",
+        "exposed": false
+      },
+      {
+        "protocol": "tcp",
+        "port": 9100,
+        "address": "192.0.2.10",
+        "process": "node_exporter",
+        "exposed": true
+      }
+    ]
+  },
+  "devices": {
+    "pci": [
+      {
+        "bus": "PCI",
+        "hardwareId": "10de:1f08",
+        "vendorId": "10de",
+        "deviceId": "1f08",
+        "vendor": "NVIDIA Corporation",
+        "name": "TU106 [GeForce RTX 2060 Rev. A]",
+        "class": "VGA compatible controller",
+        "driver": "nvidia",
+        "status": "OK",
+        "address": "01:00.0",
+        "link": {
+          "currentSpeed": "2.5 GT/s PCIe",
+          "maxSpeed": "16.0 GT/s PCIe",
+          "currentWidth": 4,
+          "maxWidth": 16
+        }
+      }
+    ],
+    "usb": [],
+    "other": []
+  },
+  "software": {
+    "packages": [
+      {
+        "name": "openssh-server",
+        "version": "1:9.2p1-2",
+        "source": "apt"
+      },
+      {
+        "name": "pve-manager",
+        "version": "8.3.2",
+        "source": "apt"
+      }
+    ],
+    "packageCount": 1284,
+    "packagesTruncated": true,
+    "packageManagers": [
+      {
+        "name": "apt",
+        "version": "2.6.1",
+        "packageCount": 1282
+      },
+      {
+        "name": "flatpak",
+        "version": "1.14.4",
+        "packageCount": 2
+      }
+    ],
+    "runtimes": [
+      {
+        "name": "node",
+        "version": "22.11.0",
+        "path": "/usr/bin/node"
+      },
+      {
+        "name": "python3",
+        "version": "3.11.2",
+        "path": "/usr/bin/python3"
+      },
+      {
+        "name": "java",
+        "version": {
+          "unknown": true,
+          "reason": "UNKNOWN"
+        },
+        "path": "/usr/bin/java"
+      }
+    ],
+    "services": [
+      {
+        "name": "ssh",
+        "state": "RUNNING",
+        "startup": "ENABLED"
+      },
+      {
+        "name": "pveproxy",
+        "state": "RUNNING",
+        "startup": "ENABLED"
+      },
+      {
+        "name": "smartmontools",
+        "state": "FAILED",
+        "startup": "ENABLED"
+      }
+    ]
+  },
+  "startup": {
+    "items": [
+      {
+        "name": "ssh",
+        "kind": "SERVICE",
+        "scope": "SYSTEM",
+        "enabled": true,
+        "command": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "location": "systemd"
+      },
+      {
+        "name": "pveproxy",
+        "kind": "SERVICE",
+        "scope": "SYSTEM",
+        "enabled": true,
+        "command": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "location": "systemd"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "device": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "hardwareId": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "vendor": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "name": "nvidia",
+      "version": "550.54.14",
+      "date": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "provider": "noyau Linux",
+      "signed": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "infName": "nvidia",
+      "status": "UNKNOWN"
+    }
+  ],
+  "security": {
+    "firewall": {
+      "engine": "nftables",
+      "state": "DISABLED",
+      "defaultInputPolicy": "accept",
+      "ruleCount": 0
+    },
+    "updates": {
+      "pending": 34,
+      "securityPending": 6,
+      "rebootRequired": true,
+      "lastCheck": "2026-07-25T04:00:00Z",
+      "lastUpdate": "2026-06-02T04:12:00Z",
+      "automaticUpdates": "DISABLED"
+    },
+    "secureBoot": "DISABLED",
+    "accounts": [
+      {
+        "name": "root",
+        "admin": true,
+        "enabled": true,
+        "passwordless": false
+      },
+      {
+        "name": "wnx",
+        "admin": true,
+        "enabled": true,
+        "passwordless": false
+      }
+    ],
+    "linux": {
+      "ssh": {
+        "installed": true,
+        "running": true,
+        "port": 22,
+        "permitRootLogin": "yes",
+        "passwordAuthentication": true,
+        "pubkeyAuthentication": true,
+        "protocolVersion": "2"
+      },
+      "intrusionPrevention": [
+        {
+          "name": "fail2ban",
+          "installed": true,
+          "running": false,
+          "activeJails": {
+            "unknown": true,
+            "reason": "UNKNOWN"
+          }
+        }
+      ],
+      "apparmor": "ENABLED",
+      "selinux": "UNSUPPORTED",
+      "luks": {
+        "present": false,
+        "devices": []
+      },
+      "sudoUsers": 1,
+      "passwordlessAccounts": 0
+    },
+    "obsoleteProtocols": []
+  },
+  "virtualization": {
+    "podman": {
+      "version": "4.9.3",
+      "containers": [
+        {
+          "name": "registre",
+          "image": "docker.io/library/registry:2",
+          "state": "running",
+          "privileged": {
+            "unknown": true,
+            "reason": "NOT_AVAILABLE"
+          },
+          "networkMode": {
+            "unknown": true,
+            "reason": "NOT_AVAILABLE"
+          },
+          "publishedPorts": [],
+          "sensitiveMounts": [],
+          "dockerSocketMounted": {
+            "unknown": true,
+            "reason": "UNSUPPORTED"
+          }
+        }
+      ],
+      "networks": []
+    },
+    "libvirt": {
+      "version": "10.0.0",
+      "guests": [
+        {
+          "name": "vm-test",
+          "state": "running",
+          "vcpus": 2,
+          "memoryBytes": 4294967296,
+          "autostart": true
+        }
+      ]
+    },
+    "docker": {
+      "version": "27.3.1",
+      "containers": [
+        {
+          "name": "homeassistant",
+          "image": "ghcr.io/home-assistant/home-assistant:stable",
+          "state": "running",
+          "privileged": true,
+          "networkMode": "host",
+          "publishedPorts": [],
+          "sensitiveMounts": ["/run/dbus"],
+          "dockerSocketMounted": false
+        }
+      ],
+      "networks": [
+        {
+          "name": "bridge",
+          "driver": "bridge"
+        }
+      ],
+      "volumeCount": 4
+    },
+    "proxmox": {
+      "version": "pve-manager/8.3.2/1d1c4e1e",
+      "node": {
+        "name": "pve-lab",
+        "kernel": "6.8.12-4-pve",
+        "uptimeSeconds": 1209600,
+        "cpuCores": 16,
+        "memoryTotalBytes": 34359738368,
+        "memoryUsedBytes": 21474836480
+      },
+      "cluster": {
+        "mode": "STANDALONE",
+        "nodeCount": 1
+      },
+      "vms": [
+        {
+          "vmid": 100,
+          "name": "win11-test",
+          "status": "stopped",
+          "cpuCores": 4,
+          "memoryBytes": 8589934592,
+          "autostart": false,
+          "tags": ["lab"],
+          "networkInterfaces": [
+            {
+              "name": "net0",
+              "bridge": "vmbr0",
+              "model": "virtio"
+            }
+          ],
+          "disks": [
+            {
+              "name": "scsi0",
+              "storage": "local-lvm",
+              "sizeBytes": 68719476736
+            }
+          ],
+          "machineType": "q35",
+          "bios": "ovmf"
+        }
+      ],
+      "containers": [
+        {
+          "ctid": 200,
+          "name": "nginx-proxy",
+          "status": "running",
+          "cpuCores": 2,
+          "memoryBytes": 1073741824,
+          "autostart": true,
+          "tags": ["prod"],
+          "networkInterfaces": [
+            {
+              "name": "eth0",
+              "bridge": "vmbr0",
+              "model": "veth"
+            }
+          ],
+          "rootfsBytes": 8589934592,
+          "storage": "local-lvm",
+          "unprivileged": true
+        }
+      ],
+      "storages": [
+        {
+          "name": "local-lvm",
+          "type": "lvmthin",
+          "status": "active",
+          "totalBytes": 800000000000,
+          "usedBytes": 412000000000,
+          "availableBytes": 388000000000,
+          "usagePercent": 51.5,
+          "shared": false,
+          "content": ["images", "rootdir"]
+        }
+      ]
+    }
+  },
+  "monitoring": {
+    "startedAt": "2026-07-25T16:41:00Z",
+    "intervalMs": 1000,
+    "durationMs": 3000,
+    "samples": [
+      {
+        "at": "2026-07-25T16:41:01Z",
+        "cpuUsagePercent": 92.4,
+        "cpuTemperatureCelsius": 78,
+        "memoryUsedBytes": 12884901888,
+        "swapUsedBytes": 1073741824,
+        "diskReadBytesPerSecond": 4194304,
+        "diskWriteBytesPerSecond": 12582912,
+        "networkRxBytesPerSecond": 131072,
+        "networkTxBytesPerSecond": 65536
+      },
+      {
+        "at": "2026-07-25T16:41:02Z",
+        "cpuUsagePercent": 88.1,
+        "cpuTemperatureCelsius": 81,
+        "memoryUsedBytes": 12952010752,
+        "swapUsedBytes": 1073741824,
+        "diskReadBytesPerSecond": 2097152,
+        "diskWriteBytesPerSecond": 8388608,
+        "networkRxBytesPerSecond": 98304,
+        "networkTxBytesPerSecond": 49152
+      },
+      {
+        "at": "2026-07-25T16:41:03Z",
+        "cpuUsagePercent": 95.7,
+        "cpuTemperatureCelsius": 83,
+        "memoryUsedBytes": 13019119616,
+        "swapUsedBytes": 1073741824,
+        "diskReadBytesPerSecond": 1048576,
+        "diskWriteBytesPerSecond": 16777216,
+        "networkRxBytesPerSecond": 143360,
+        "networkTxBytesPerSecond": 71680,
+        "cpuFrequencyMhz": 3190,
+        "cpuThrottled": true
+      }
+    ],
+    "aggregates": {
+      "cpuUsagePercent": {
+        "current": 95.7,
+        "minimum": 88.1,
+        "maximum": 95.7,
+        "average": 92.07,
+        "unit": "%",
+        "sampleCount": 3,
+        "sampleIntervalMs": 1000,
+        "sampleDurationMs": 3000,
+        "source": "/proc/stat"
+      },
+      "cpuTemperatureCelsius": {
+        "current": 83,
+        "minimum": 78,
+        "maximum": 83,
+        "average": 80.67,
+        "unit": "°C",
+        "sampleCount": 3,
+        "sampleIntervalMs": 1000,
+        "sampleDurationMs": 3000,
+        "source": "/sys/class/hwmon"
+      },
+      "cpuFrequencyMhz": {
+        "current": 3190,
+        "minimum": 3190,
+        "maximum": 3190,
+        "average": 3190,
+        "unit": "MHz",
+        "sampleCount": 1,
+        "sampleIntervalMs": 1000,
+        "sampleDurationMs": {
+          "unknown": true,
+          "reason": "UNKNOWN",
+          "detail": "un seul relevé exploitable"
+        },
+        "source": "/sys/devices/system/cpu"
+      }
+    }
+  },
+  "benchmark": {
+    "startedAt": "2026-07-25T16:40:00Z",
+    "finishedAt": "2026-07-25T16:41:01Z",
+    "durationMs": 61000,
+    "secondsPerTargetPlanned": 20,
+    "telemetry": {
+      "intervalMs": 1000,
+      "samples": [
+        {
+          "at": "2026-07-25T16:39:57Z",
+          "phase": "idle",
+          "cpuUsagePercent": 3.1,
+          "cpuTemperatureCelsius": 41,
+          "cpuFrequencyMhz": 1400,
+          "cpuPackagePowerWatts": 14.2,
+          "cpuFanRpm": 720,
+          "memoryUsedBytes": 8589934592,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 131072,
+          "networkRxBytesPerSecond": 8192,
+          "networkTxBytesPerSecond": 4096
+        },
+        {
+          "at": "2026-07-25T16:39:58Z",
+          "phase": "idle",
+          "cpuUsagePercent": 2.4,
+          "cpuTemperatureCelsius": 42,
+          "cpuFrequencyMhz": 1380,
+          "cpuPackagePowerWatts": 13.8,
+          "cpuFanRpm": 715,
+          "memoryUsedBytes": 8590000000,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 6144,
+          "networkTxBytesPerSecond": 3072
+        },
+        {
+          "at": "2026-07-25T16:39:59Z",
+          "phase": "idle",
+          "cpuUsagePercent": 4,
+          "cpuTemperatureCelsius": 42,
+          "cpuFrequencyMhz": 1420,
+          "cpuPackagePowerWatts": 14.6,
+          "cpuFanRpm": 730,
+          "memoryUsedBytes": 8591000000,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 98304,
+          "networkRxBytesPerSecond": 7168,
+          "networkTxBytesPerSecond": 3584
+        },
+        {
+          "at": "2026-07-25T16:40:35Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 61,
+          "cpuFrequencyMhz": 5000,
+          "cpuPackagePowerWatts": 142,
+          "cpuFanRpm": 1180,
+          "cpuThrottled": false,
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:36Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 68,
+          "cpuFrequencyMhz": 4880,
+          "cpuPackagePowerWatts": 141.2,
+          "cpuFanRpm": 1340,
+          "cpuThrottled": false,
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:37Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 76,
+          "cpuFrequencyMhz": 4610,
+          "cpuPackagePowerWatts": 139.8,
+          "cpuFanRpm": 1520,
+          "cpuThrottled": false,
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:38Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 84,
+          "cpuFrequencyMhz": 4120,
+          "cpuPackagePowerWatts": 132.4,
+          "cpuFanRpm": 1760,
+          "cpuThrottled": false,
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:39Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 89,
+          "cpuFrequencyMhz": 3540,
+          "cpuPackagePowerWatts": 121,
+          "cpuFanRpm": 1910,
+          "cpuThrottled": true,
+          "cpuThrottleReason": "thermal",
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:40Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 91,
+          "cpuFrequencyMhz": 3180,
+          "cpuPackagePowerWatts": 112.6,
+          "cpuFanRpm": 1980,
+          "cpuThrottled": true,
+          "cpuThrottleReason": "thermal",
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:41Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 91,
+          "cpuFrequencyMhz": 3090,
+          "cpuPackagePowerWatts": 110.2,
+          "cpuFanRpm": 1990,
+          "cpuThrottled": true,
+          "cpuThrottleReason": "thermal",
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:42Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 90,
+          "cpuFrequencyMhz": 3120,
+          "cpuPackagePowerWatts": 111.4,
+          "cpuFanRpm": 1985,
+          "cpuThrottled": true,
+          "cpuThrottleReason": "thermal",
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:40:43Z",
+          "phase": "cpu-soak",
+          "cpuUsagePercent": 99.4,
+          "cpuTemperatureCelsius": 91,
+          "cpuFrequencyMhz": 3090,
+          "cpuPackagePowerWatts": 110.8,
+          "cpuFanRpm": 1990,
+          "cpuThrottled": true,
+          "cpuThrottleReason": "thermal",
+          "memoryUsedBytes": 12884901888,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 65536,
+          "networkRxBytesPerSecond": 12288,
+          "networkTxBytesPerSecond": 6144
+        },
+        {
+          "at": "2026-07-25T16:52:10Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 72,
+          "cpuFrequencyMhz": 3983,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1450,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4900, 4880, 3100, 3050],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 62,
+          "gpuHotspotCelsius": 73,
+          "gpuCoreClockMhz": 2610,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 1800,
+          "gpuAuxiliaryFanRpm": [1790, 1810],
+          "framesPerSecond": 118,
+          "frameTimeMs": 8.47
+        },
+        {
+          "at": "2026-07-25T16:52:11Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 73,
+          "cpuFrequencyMhz": 3973,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1480,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4890, 4870, 3090, 3040],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 66,
+          "gpuHotspotCelsius": 77,
+          "gpuCoreClockMhz": 2595,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 1860,
+          "gpuAuxiliaryFanRpm": [1850, 1870],
+          "framesPerSecond": 116,
+          "frameTimeMs": 8.62
+        },
+        {
+          "at": "2026-07-25T16:52:12Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 74,
+          "cpuFrequencyMhz": 3650,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1510,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [
+            4860,
+            {
+              "unknown": true,
+              "reason": "NOT_AVAILABLE",
+              "detail": "cpufreq n’expose pas la fréquence de ce cœur"
+            },
+            3070,
+            3020
+          ],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 71,
+          "gpuHotspotCelsius": 82,
+          "gpuCoreClockMhz": 2540,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 1920,
+          "gpuAuxiliaryFanRpm": [1910, 1930],
+          "framesPerSecond": 109,
+          "frameTimeMs": 9.17
+        },
+        {
+          "at": "2026-07-25T16:52:13Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 75,
+          "cpuFrequencyMhz": 3845,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1540,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4700, 4690, 3010, 2980],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 75,
+          "gpuHotspotCelsius": 86,
+          "gpuCoreClockMhz": 2430,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 1980,
+          "gpuAuxiliaryFanRpm": [1970, 1990],
+          "framesPerSecond": 98,
+          "frameTimeMs": 10.2
+        },
+        {
+          "at": "2026-07-25T16:52:14Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 76,
+          "cpuFrequencyMhz": 3735,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1570,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4540, 4520, 2950, 2930],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 78,
+          "gpuHotspotCelsius": 89,
+          "gpuCoreClockMhz": 2310,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 2040,
+          "gpuAuxiliaryFanRpm": [2030, 2050],
+          "framesPerSecond": 91,
+          "frameTimeMs": 10.99
+        },
+        {
+          "at": "2026-07-25T16:52:15Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 77,
+          "cpuFrequencyMhz": 3630,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1600,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4380, 4360, 2900, 2880],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 80,
+          "gpuHotspotCelsius": 91,
+          "gpuCoreClockMhz": 2190,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 2100,
+          "gpuAuxiliaryFanRpm": [2090, 2110],
+          "framesPerSecond": 84,
+          "frameTimeMs": 11.9
+        },
+        {
+          "at": "2026-07-25T16:52:16Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 78,
+          "cpuFrequencyMhz": 3588,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1630,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4310, 4300, 2880, 2860],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 81,
+          "gpuHotspotCelsius": 92,
+          "gpuCoreClockMhz": 2140,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 2160,
+          "gpuAuxiliaryFanRpm": [2150, 2170],
+          "framesPerSecond": 81,
+          "frameTimeMs": 12.35
+        },
+        {
+          "at": "2026-07-25T16:52:17Z",
+          "phase": "gaming",
+          "cpuUsagePercent": 52.4,
+          "cpuTemperatureCelsius": 79,
+          "cpuFrequencyMhz": 3580,
+          "cpuPackagePowerWatts": 96.5,
+          "cpuFanRpm": 1660,
+          "memoryUsedBytes": 17179869184,
+          "swapUsedBytes": 1073741824,
+          "diskReadBytesPerSecond": 0,
+          "diskWriteBytesPerSecond": 32768,
+          "networkRxBytesPerSecond": 4096,
+          "networkTxBytesPerSecond": 2048,
+          "cpuCoreClocksMhz": [4300, 4290, 2875, 2855],
+          "cpuCoreUsagePercent": [99.1, 98.7, 12.4, 11.8],
+          "gpuIndex": 0,
+          "gpuTemperatureCelsius": 81,
+          "gpuHotspotCelsius": 92,
+          "gpuCoreClockMhz": 2130,
+          "gpuMemoryClockMhz": 10501,
+          "gpuBoardPowerWatts": 184.2,
+          "gpuUsagePercent": 99,
+          "gpuFanRpm": 2220,
+          "gpuAuxiliaryFanRpm": [2210, 2230],
+          "framesPerSecond": 80,
+          "frameTimeMs": 12.5
+        }
+      ]
+    },
+    "results": [
+      {
+        "target": "cpu-single",
+        "status": "completed",
+        "startedAt": "2026-07-25T16:40:00Z",
+        "finishedAt": "2026-07-25T16:40:30Z",
+        "tool": "openssl",
+        "protocolVersion": "1.0.0",
+        "toolVersion": "3.0.13",
+        "algorithm": "AES-128-CBC",
+        "parameters": "-evp aes-128-cbc -seconds 20 -bytes 16384",
+        "durationMs": 30400,
+        "score": 1738,
+        "unit": "MiB/s",
+        "temperatureCelsius": 79,
+        "temperatureBeforeCelsius": 42,
+        "temperatureMaxCelsius": 84,
+        "throttled": true
+      },
+      {
+        "target": "cpu-soak",
+        "status": "completed",
+        "startedAt": "2026-07-25T16:40:35Z",
+        "finishedAt": "2026-07-25T16:50:35Z",
+        "tool": "openssl",
+        "protocolVersion": "1.0.0",
+        "toolVersion": "3.0.13",
+        "algorithm": "AES-128-CBC soutenu, 20 segment(s) de 30 s",
+        "parameters": "-evp aes-128-cbc -seconds 30 -bytes 16384 -multi 16",
+        "durationMs": 600000,
+        "score": 1512,
+        "unit": "MiB/s",
+        "temperatureCelsius": 88,
+        "temperatureBeforeCelsius": 45,
+        "temperatureMaxCelsius": 91,
+        "throttled": true
+      },
+      {
+        "target": "gpu",
+        "status": "completed",
+        "device": "NVIDIA GeForce RTX 4070",
+        "startedAt": "2026-07-25T16:50:40Z",
+        "finishedAt": "2026-07-25T16:51:00Z",
+        "tool": "glmark2",
+        "protocolVersion": "1.0.0",
+        "toolVersion": "2023.01",
+        "algorithm": "rendu synthétique hors écran",
+        "parameters": "--off-screen",
+        "durationMs": 20000,
+        "score": 23093,
+        "unit": "points",
+        "temperatureCelsius": 74,
+        "throttled": false,
+        "framesPerSecond": {
+          "current": 300,
+          "minimum": 300,
+          "maximum": 56947,
+          "average": 23093.7,
+          "unit": "FPS",
+          "sampleCount": 3,
+          "sampleIntervalMs": {
+            "unknown": true,
+            "reason": "NOT_APPLICABLE",
+            "detail": "une mesure par scène, non par intervalle"
+          },
+          "sampleDurationMs": {
+            "unknown": true,
+            "reason": "NOT_APPLICABLE",
+            "detail": "une mesure par scène, non par intervalle"
+          },
+          "source": "glmark2 --off-screen"
+        },
+        "frameTimeMs": {
+          "current": 3.333,
+          "minimum": 0.018,
+          "maximum": 3.333,
+          "average": 1.145,
+          "unit": "ms",
+          "sampleCount": 3,
+          "sampleIntervalMs": {
+            "unknown": true,
+            "reason": "NOT_APPLICABLE",
+            "detail": "une mesure par scène, non par intervalle"
+          },
+          "sampleDurationMs": {
+            "unknown": true,
+            "reason": "NOT_APPLICABLE",
+            "detail": "une mesure par scène, non par intervalle"
+          },
+          "source": "glmark2 --off-screen"
+        }
+      },
+      {
+        "target": "gpu",
+        "status": "skipped",
+        "detail": "glmark2 absent : mesure GPU indisponible.",
+        "tool": "glmark2",
+        "protocolVersion": "1.0.0",
+        "toolVersion": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "algorithm": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "parameters": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "durationMs": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "score": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE",
+          "detail": "glmark2 absent : mesure GPU indisponible."
+        },
+        "unit": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "temperatureCelsius": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "throttled": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        }
+      },
+      {
+        "target": "gpu",
+        "status": "completed",
+        "device": "NVIDIA GeForce RTX 4070",
+        "startedAt": "2026-07-25T16:50:40Z",
+        "finishedAt": "2026-07-25T16:51:00Z",
+        "tool": "glmark2",
+        "protocolVersion": "1.0.0",
+        "toolVersion": "2023.01",
+        "algorithm": "rendu synthétique hors écran",
+        "parameters": "--off-screen DRI_PRIME=1",
+        "durationMs": 20000,
+        "score": 4820,
+        "unit": "points",
+        "temperatureCelsius": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "throttled": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "gpu": {
+          "utilizationPercent": 98,
+          "coreClockMhz": 2610,
+          "memoryClockMhz": 10501,
+          "vramUsedBytes": 1073741824,
+          "vramTotalBytes": 12884901888,
+          "temperatureCelsius": 67,
+          "powerWatts": 185.4
+        }
+      },
+      {
+        "target": "gaming",
+        "status": "completed",
+        "device": "NVIDIA GeForce RTX 4070",
+        "startedAt": "2026-07-25T16:52:10Z",
+        "finishedAt": "2026-07-25T16:52:18Z",
+        "tool": "glmark2 + openssl",
+        "protocolVersion": "1.0.0",
+        "toolVersion": "2023.01",
+        "algorithm": "rendu synthétique hors écran sous charge AES-128-CBC",
+        "parameters": "glmark2 --off-screen -b build -b texture -b shading -b bump ; openssl speed -evp aes-128-cbc -multi 8",
+        "durationMs": 8000,
+        "score": 14820,
+        "unit": "points",
+        "temperatureCelsius": 79,
+        "temperatureBeforeCelsius": 51,
+        "temperatureMaxCelsius": 81,
+        "throttled": false,
+        "frameStability": {
+          "frameCount": 812,
+          "onePercentLowFps": 61,
+          "zeroPointOnePercentLowFps": 44,
+          "stutterCount": 7,
+          "stutterThresholdMs": 21.4,
+          "stutterRule": "trame au-delà de 2× la médiane du rendu (10,7 ms)"
+        }
+      },
+      {
+        "target": "cpu-gpu",
+        "status": "skipped",
+        "detail": "arrêt de sécurité : 91 °C atteints pendant la charge précédente, au-delà du seuil publié par le capteur.",
+        "tool": "glmark2 + openssl",
+        "protocolVersion": "1.0.0",
+        "toolVersion": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "algorithm": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "parameters": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "durationMs": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "score": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE",
+          "detail": "charge non exécutée : arrêt de sécurité."
+        },
+        "unit": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "temperatureCelsius": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        },
+        "throttled": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE"
+        }
+      }
+    ]
+  },
+  "stability": {
+    "uptimeSeconds": 3600,
+    "bootedAt": "2026-07-25T15:42:00Z",
+    "reboots": {
+      "count": 4,
+      "observationWindowMs": 2592000000,
+      "lastAt": "2026-07-25T15:42:00Z",
+      "source": "last reboot"
+    },
+    "unexpectedShutdowns": {
+      "count": 1,
+      "observationWindowMs": 2592000000,
+      "lastAt": "2026-07-12T03:17:44Z",
+      "source": "journalctl --list-boots"
+    },
+    "kernelCrashes": {
+      "count": 0,
+      "observationWindowMs": 2592000000,
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_APPLICABLE",
+        "detail": "aucune panique sur la fenêtre"
+      },
+      "source": "journalctl -k -p emerg"
+    },
+    "storageErrors": {
+      "count": 47,
+      "observationWindowMs": 1814400000,
+      "lastAt": "2026-07-25T04:12:09Z",
+      "source": "journalctl -k -p err"
+    },
+    "serviceFailures": {
+      "count": 2,
+      "observationWindowMs": 2592000000,
+      "lastAt": "2026-07-24T22:05:00Z",
+      "source": "journalctl -u"
+    },
+    "hardwareErrors": {
+      "count": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE",
+        "detail": "ni rasdaemon ni EDAC sur cette machine"
+      },
+      "observationWindowMs": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      },
+      "source": {
+        "unknown": true,
+        "reason": "NOT_AVAILABLE"
+      }
+    },
+    "filesystemErrors": {
+      "count": 0,
+      "observationWindowMs": 1814400000,
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_APPLICABLE",
+        "detail": "aucune erreur sur la fenêtre"
+      },
+      "source": "journalctl -k -p err"
+    },
+    "memoryPressureEvents": {
+      "count": 0,
+      "observationWindowMs": 1814400000,
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_APPLICABLE",
+        "detail": "aucun manque de mémoire sur la fenêtre"
+      },
+      "source": "journalctl -k"
+    },
+    "networkErrors": {
+      "count": 3,
+      "observationWindowMs": 1814400000,
+      "lastAt": "2026-07-20T11:02:41Z",
+      "source": "journalctl -k -p warning"
+    },
+    "driverErrors": {
+      "count": 0,
+      "observationWindowMs": 1814400000,
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_APPLICABLE",
+        "detail": "aucune erreur de module sur la fenêtre"
+      },
+      "source": "journalctl -k -p err"
+    },
+    "applicationCrashes": {
+      "count": 2,
+      "observationWindowMs": 2592000000,
+      "lastAt": "2026-07-23T19:44:12Z",
+      "source": "coredumpctl list"
+    },
+    "thermalEvents": {
+      "count": 0,
+      "observationWindowMs": 1814400000,
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_APPLICABLE",
+        "detail": "aucun incident thermique sur la fenêtre"
+      },
+      "source": "journalctl -k"
+    },
+    "failedUpdates": {
+      "count": 0,
+      "observationWindowMs": 2592000000,
+      "lastAt": {
+        "unknown": true,
+        "reason": "NOT_APPLICABLE",
+        "detail": "aucune mise à jour en échec sur la fenêtre"
+      },
+      "source": "journalctl -u apt-daily"
+    },
+    "failedUnits": [
+      {
+        "name": "backup-nightly.service",
+        "state": "failed",
+        "result": "exit-code",
+        "since": "2026-07-24T22:05:00Z",
+        "restarts": 3
+      }
+    ],
+    "stoppedUnits": [],
+    "coredumps": [
+      {
+        "executable": "firefox",
+        "signal": "SIGSEGV",
+        "at": "2026-07-23T19:44:12Z",
+        "count": 2,
+        "present": false
+      }
+    ],
+    "kernelTainted": 512,
+    "meta": {
+      "source": "journalctl",
+      "method": "commande shell",
+      "collectedAt": "2026-07-25T16:42:00Z",
+      "observationWindowMs": 2592000000
+    }
+  },
+  "boot": {
+    "phases": [
+      {
+        "name": "firmware",
+        "durationMs": 4820000
+      },
+      {
+        "name": "loader",
+        "durationMs": 3100
+      },
+      {
+        "name": "kernel",
+        "durationMs": 2940
+      },
+      {
+        "name": "initrd",
+        "durationMs": 1780
+      },
+      {
+        "name": "userspace",
+        "durationMs": 18400
+      }
+    ],
+    "totalMs": 4846220,
+    "measuredAt": "2026-07-25T16:42:00Z",
+    "slowestItems": [
+      {
+        "name": "NetworkManager-wait-online.service",
+        "durationMs": 12100,
+        "kind": "unit"
+      },
+      {
+        "name": "docker.service",
+        "durationMs": 4300,
+        "kind": "unit"
+      }
+    ],
+    "failedAtBoot": [
+      {
+        "name": "backup-nightly.service",
+        "state": "failed",
+        "result": "exit-code",
+        "since": "2026-07-25T15:42:31Z",
+        "restarts": {
+          "unknown": true,
+          "reason": "UNKNOWN"
+        }
+      }
+    ],
+    "firmwareMode": "UEFI",
+    "fastStartupEnabled": {
+      "unknown": true,
+      "reason": "NOT_APPLICABLE",
+      "detail": "notion sans objet sous Linux"
+    },
+    "history": [
+      {
+        "at": "2026-07-25T15:42:00Z",
+        "totalMs": 4846220
+      },
+      {
+        "at": "2026-07-18T08:03:00Z",
+        "totalMs": 4612900
+      },
+      {
+        "at": "2026-07-11T07:58:00Z",
+        "totalMs": 4701300
+      }
+    ],
+    "kernels": {
+      "running": "6.8.12-4-pve",
+      "installed": ["6.8.12-4-pve", "6.8.12-2-pve"],
+      "newestInstalled": "6.8.12-4-pve",
+      "source": "dpkg-query"
+    },
+    "meta": {
+      "source": "systemd-analyze",
+      "method": "commande shell",
+      "collectedAt": "2026-07-25T16:42:00Z"
+    }
+  },
+  "shutdown": {
+    "lastShutdownAt": "2026-07-25T15:41:12Z",
+    "lastShutdownWasClean": true,
+    "lastShutdownReason": "systemd-shutdown: powering off",
+    "lastShutdownDurationMs": 9400,
+    "slowestItems": [
+      {
+        "name": "docker.service",
+        "durationMs": 6200,
+        "kind": "unit"
+      }
+    ],
+    "meta": {
+      "source": "journalctl --list-boots",
+      "method": "commande shell",
+      "collectedAt": "2026-07-25T16:42:00Z"
+    }
+  },
+  "events": {
+    "window": {
+      "requestedMs": 7776000000,
+      "coveredMs": 1814400000,
+      "since": "2026-07-04T16:42:00Z",
+      "until": "2026-07-25T16:42:00Z",
+      "persistent": true
+    },
+    "examined": 18432,
+    "truncated": false,
+    "entries": [
+      {
+        "category": "STORAGE",
+        "severity": "ERROR",
+        "provider": "kernel",
+        "nativeId": "ata3.00",
+        "firstSeenAt": "2026-07-04T22:31:07Z",
+        "lastSeenAt": "2026-07-25T04:12:09Z",
+        "occurrences": 47,
+        "summary": "ata3.00: failed command: READ FPDMA QUEUED",
+        "fingerprint": "ata-failed-command-read-fpdma",
+        "source": "journalctl -k -p err",
+        "evidence": [
+          "ata3.00: exception Emask 0x0 SAct 0x400000 SErr 0x0 action 0x0",
+          "ata3.00: cmd 60/08:00:28:1f:b1/00:00:1d:00:00/40 tag 22 ncq dma 4096 in",
+          "blk_update_request: I/O error, dev sda, sector 490037292 op 0x0:(READ)"
+        ]
+      },
+      {
+        "category": "POWER",
+        "severity": "CRITICAL",
+        "provider": "systemd-logind",
+        "nativeId": {
+          "unknown": true,
+          "reason": "NOT_AVAILABLE",
+          "detail": "journald ne numérote pas les entrées"
+        },
+        "firstSeenAt": "2026-07-12T03:17:44Z",
+        "lastSeenAt": "2026-07-12T03:17:44Z",
+        "occurrences": 1,
+        "summary": "arrêt non propre détecté au démarrage suivant",
+        "fingerprint": "unclean-shutdown",
+        "source": "journalctl --list-boots"
+      }
+    ],
+    "meta": {
+      "source": "journalctl",
+      "method": "commande shell",
+      "collectedAt": "2026-07-25T16:42:00Z",
+      "observationWindowMs": 1814400000
+    }
+  },
+  "collection": {
+    "issues": [],
+    "skippedSections": ["drivers", "firmware"],
+    "plannedSections": [
+      "system",
+      "os",
+      "motherboard",
+      "bios",
+      "cpus",
+      "memory",
+      "gpus",
+      "audio",
+      "sensors",
+      "power",
+      "storage",
+      "network",
+      "devices",
+      "software",
+      "startup",
+      "security",
+      "virtualization",
+      "stability",
+      "boot",
+      "shutdown",
+      "events",
+      "benchmark"
+    ],
+    "knownSections": [
+      "system",
+      "os",
+      "motherboard",
+      "bios",
+      "cpus",
+      "memory",
+      "gpus",
+      "audio",
+      "sensors",
+      "power",
+      "storage",
+      "network",
+      "devices",
+      "drivers",
+      "software",
+      "startup",
+      "security",
+      "virtualization",
+      "stability",
+      "boot",
+      "shutdown",
+      "events",
+      "benchmark"
+    ],
+    "timings": [
+      {
+        "section": "system",
+        "durationMs": 38
+      },
+      {
+        "section": "os",
+        "durationMs": 91
+      },
+      {
+        "section": "storage",
+        "durationMs": 5104
+      },
+      {
+        "section": "network",
+        "durationMs": 588
+      },
+      {
+        "section": "security",
+        "durationMs": 301
+      },
+      {
+        "section": "benchmark",
+        "durationMs": 182450
+      }
+    ],
+    "dependencies": [
+      {
+        "tool": "smartctl",
+        "package": "smartmontools",
+        "outcome": "PRESENT_BEFORE",
+        "version": "smartctl 7.4 2023-08-01 r5530",
+        "unlocks": "santé SMART et usure des disques",
+        "used": true,
+        "removal": "NOT_APPLICABLE"
+      },
+      {
+        "tool": "nvme",
+        "package": "nvme-cli",
+        "outcome": "INSTALLED",
+        "version": "nvme version 2.8",
+        "method": "apt-get install -y --no-install-recommends",
+        "unlocks": "journal SMART NVMe étendu",
+        "used": true,
+        "removal": "KEPT"
+      },
+      {
+        "tool": "glmark2",
+        "package": "glmark2",
+        "outcome": "DECLINED",
+        "unlocks": "mesure GPU du banc d’essai",
+        "used": false,
+        "removal": "NOT_APPLICABLE"
+      },
+      {
+        "tool": "sensors",
+        "package": "lm-sensors",
+        "outcome": "INSTALL_FAILED",
+        "method": "apt-get install -y --no-install-recommends",
+        "unlocks": "capteurs complémentaires",
+        "used": false,
+        "removal": "NOT_APPLICABLE",
+        "error": "E: Unable to locate package lm-sensors"
+      }
+    ],
+    "dependenciesInspected": true,
+    "provenance": {
+      "audio.devices": {
+        "source": "/proc/asound/cards",
+        "method": "lecture fichier",
+        "precision": "carte",
+        "collectedAt": "2026-07-25T16:42:00Z"
+      },
+      "startup.items": {
+        "source": "systemctl list-unit-files",
+        "method": "commande shell",
+        "precision": "service",
+        "collectedAt": "2026-07-25T16:42:00Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+zroot	1.81T	412G	ONLINE
+tank	7.25T	5.10T	DEGRADED

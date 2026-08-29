@@ -1,0 +1,5 @@
+# SC1112 signale les apostrophes typographiques (’) comme d'éventuelles fautes
+# de frappe. Les messages du scanner sont en français et les utilisent
+# volontairement ; dans une chaîne entre apostrophes simples, ce caractère est
+# un octet ordinaire sans effet sur l'interprétation du shell.
+disable=SC1112

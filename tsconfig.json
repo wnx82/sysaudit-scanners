@@ -1,0 +1,9 @@
+{
+  "//": "Solution file : chaque paquet publié s'enregistre ici via une référence.",
+  "files": [],
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./packages/report-schema" },
+    { "path": "./packages/platform" }
+  ]
+}

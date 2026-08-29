@@ -1,0 +1,9 @@
+# Valeurs `sysctl -n` d'un MacBook Pro 16" M1 Pro, une par ligne « clé valeur ».
+# `machdep.cpu.brand_string` est volontairement absent : il n'existe pas sur
+# Apple Silicon, et c'est le cas que le scanner doit savoir traiter.
+hw.model MacBookPro18,3
+hw.memsize 34359738368
+hw.pagesize 16384
+hw.physicalcpu 10
+hw.logicalcpu 10
+kern.boottime { sec = 1785000000, usec = 0 } Fri Jul 25 15:20:00 2026

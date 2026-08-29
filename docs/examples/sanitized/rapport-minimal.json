@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.33.0",
+  "scannerVersion": "0.1.0",
+  "report": {
+    "generatedAt": "2026-07-25T16:42:00Z",
+    "scannerKind": "linux",
+    "profile": "standard",
+    "anonymized": false,
+    "anonymizedCategories": []
+  },
+  "capabilities": {
+    "platform": "linux",
+    "architecture": "x86_64",
+    "privileged": false,
+    "proxmox": false,
+    "docker": false,
+    "tools": {
+      "dmidecode": false,
+      "smartctl": false,
+      "lspci": false,
+      "sensors": false
+    }
+  },
+  "system": {
+    "hostname": "demo-host",
+    "manufacturer": {
+      "unknown": true,
+      "reason": "NOT_AVAILABLE",
+      "detail": "dmidecode absent"
+    },
+    "model": {
+      "unknown": true,
+      "reason": "NOT_AVAILABLE",
+      "detail": "dmidecode absent"
+    },
+    "chassisType": {
+      "unknown": true,
+      "reason": "NOT_AVAILABLE"
+    },
+    "uuid": {
+      "unknown": true,
+      "reason": "PERMISSION_DENIED"
+    },
+    "serialNumber": {
+      "unknown": true,
+      "reason": "PERMISSION_DENIED"
+    },
+    "architecture": "x86_64",
+    "uptimeSeconds": 3600,
+    "timezone": "Europe/Brussels",
+    "localTime": "2026-07-25T18:42:00+02:00"
+  },
+  "os": {
+    "family": "linux",
+    "name": "Debian GNU/Linux",
+    "edition": {
+      "unknown": true,
+      "reason": "UNSUPPORTED",
+      "detail": "notion sans objet sous Linux"
+    },
+    "distribution": "Debian",
+    "version": "13",
+    "build": {
+      "unknown": true,
+      "reason": "NOT_AVAILABLE"
+    },
+    "kernel": "6.12.0-amd64",
+    "architecture": "x86_64",
+    "installDate": {
+      "unknown": true,
+      "reason": "NOT_AVAILABLE"
+    },
+    "locale": "fr_BE.UTF-8",
+    "timezone": "Europe/Brussels"
+  },
+  "collection": {
+    "issues": [
+      {
+        "section": "motherboard",
+        "severity": "warning",
+        "message": "dmidecode absent : identité matérielle non collectée.",
+        "source": "dmidecode",
+        "reason": "NOT_AVAILABLE"
+      }
+    ],
+    "skippedSections": ["drivers", "firmware"],
+    "plannedSections": [
+      "system",
+      "os",
+      "motherboard",
+      "bios",
+      "cpus",
+      "memory",
+      "gpus",
+      "audio",
+      "sensors",
+      "power",
+      "storage",
+      "network",
+      "devices",
+      "startup",
+      "security",
+      "virtualization",
+      "stability",
+      "boot",
+      "shutdown",
+      "events"
+    ],
+    "knownSections": [
+      "system",
+      "os",
+      "motherboard",
+      "bios",
+      "cpus",
+      "memory",
+      "gpus",
+      "audio",
+      "sensors",
+      "power",
+      "storage",
+      "network",
+      "devices",
+      "drivers",
+      "software",
+      "startup",
+      "security",
+      "virtualization",
+      "stability",
+      "boot",
+      "shutdown",
+      "events",
+      "benchmark"
+    ],
+    "timings": [
+      {
+        "section": "system",
+        "durationMs": 41
+      },
+      {
+        "section": "os",
+        "durationMs": 96
+      },
+      {
+        "section": "storage",
+        "durationMs": 4820
+      },
+      {
+        "section": "network",
+        "durationMs": 612
+      },
+      {
+        "section": "security",
+        "durationMs": 288
+      }
+    ],
+    "dependencies": [
+      {
+        "tool": "smartctl",
+        "package": "smartmontools",
+        "outcome": "PRESENT_BEFORE",
+        "version": "smartctl 7.4 2023-08-01 r5530",
+        "unlocks": "santé SMART et usure des disques",
+        "used": true,
+        "removal": "NOT_APPLICABLE"
+      },
+      {
+        "tool": "dmidecode",
+        "package": "dmidecode",
+        "outcome": "NOT_OFFERED",
+        "unlocks": "carte mère, BIOS et barrettes mémoire",
+        "used": false,
+        "removal": "NOT_APPLICABLE"
+      }
+    ],
+    "dependenciesInspected": true,
+    "provenance": {
+      "system": {
+        "source": "/etc/os-release",
+        "method": "lecture fichier",
+        "precision": "instantané",
+        "collectedAt": "2026-07-25T16:42:00Z"
+      }
+    }
+  }
+}

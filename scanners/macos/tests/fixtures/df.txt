@@ -1,0 +1,4 @@
+Filesystem   1024-blocks      Used Available Capacity  Mounted on
+/dev/disk3s1s1 971350180  22103208 745123456    3%    /
+/dev/disk3s6   971350180      1024 745123456    1%    /System/Volumes/VM
+map auto_home          0         0         0  100%    /System/Volumes/Data/home

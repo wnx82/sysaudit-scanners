@@ -1,0 +1,16 @@
+	Array Handle: 0x0009
+	Error Information Handle: Not Provided
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_B1
+	Bank Locator: P0 CHANNEL B
+	Type: Unknown
+	Type Detail: Unknown
+	Speed: Unknown
+	Manufacturer: Unknown
+	Serial Number: Unknown
+	Asset Tag: Not Specified
+	Part Number: Unknown

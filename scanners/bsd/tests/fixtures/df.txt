@@ -1,0 +1,4 @@
+Filesystem   1024-blocks      Used    Avail Capacity  Mounted on
+/dev/gpt/rootfs  103080312  21456789 73412345    23%    /
+/dev/gpt/varfs    20616060   3145728 15832100    17%    /var
+devfs                    1         1        0   100%    /dev

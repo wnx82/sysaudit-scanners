@@ -1,0 +1,45 @@
+{
+  "name": "sysaudit",
+  "version": "0.156.0",
+  "private": true,
+  "description": "Scanners système et format de rapport SysAudit — composants publiés.",
+  "homepage": "https://sysaudit.me",
+  "license": "LicenseRef-SysAudit-Source-Available",
+  "type": "module",
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "tsc:native": "node ./node_modules/typescript-native/bin/tsc",
+    "typecheck": "npm run tsc:native -- --build --force",
+    "test": "vitest run",
+    "build": "npm run build --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:shell": "git ls-files '*.sh' | xargs -r shellcheck -S warning",
+    "test:scanner": "bash scanners/linux/tests/run.sh",
+    "test:scanner:windows": "pwsh -NoProfile -File scanners/windows/tests/run.ps1",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.1.2",
+    "@vitest/coverage-v8": "4.1.10",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "eslint": "10.8.0",
+    "globals": "17.9.0",
+    "prettier": "3.9.6",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
+    "typescript-eslint": "8.66.0",
+    "typescript-native": "npm:typescript@7.0.2",
+    "vitest": "4.1.10"
+  },
+  "overrides": {
+    "zod": "4.4.3"
+  }
+}

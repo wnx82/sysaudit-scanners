@@ -1,0 +1,5 @@
+# Sortie de `kenv <clé>` : la valeur seule, telle que FreeBSD la rend.
+smbios.system.maker Supermicro
+smbios.system.product X11SSH-F
+smbios.system.uuid 00000000-0000-0000-0000-0cc47a123456
+smbios.system.serial VM12345678

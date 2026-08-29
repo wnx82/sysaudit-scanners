@@ -1,0 +1,27 @@
+{
+  "name": "@sysaudit/shared",
+  "version": "0.69.0",
+  "private": true,
+  "description": "Utilitaires partagés SysAudit (valeurs inconnues, anonymisation, SemVer, tailles, identifiants)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./error-reporting": {
+      "types": "./dist/error-reporting.d.ts",
+      "default": "./dist/error-reporting.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node ../../node_modules/typescript-native/bin/tsc --build",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  }
+}

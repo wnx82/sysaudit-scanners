@@ -1,0 +1,49 @@
+SysAudit — Source-Available License Notice
+Copyright (c) 2026 eKreativ.be. All rights reserved.
+
+SPDX-License-Identifier: LicenseRef-SysAudit-Source-Available
+
+SysAudit is NOT open source software.
+
+The source code, documentation and other materials published in this repository
+are made available for the sole purposes of review, evaluation, security
+inspection and interoperability with the SysAudit report format. No open-source
+license is granted, and no rights are granted by implication or estoppel.
+
+WHAT YOU MAY DO
+
+  1. Read, download and inspect these materials.
+  2. Run the published scanners on machines you own or are authorised to audit.
+  3. Read, parse and produce files conforming to the published SysAudit report
+     format, including in your own software.
+  4. Quote short excerpts for the purposes of security reporting, review,
+     teaching or commentary, with attribution.
+
+WHAT YOU MAY NOT DO WITHOUT PRIOR WRITTEN PERMISSION
+
+  1. Redistribute these materials, modified or unmodified.
+  2. Create or distribute derivative works.
+  3. Use these materials to build or operate a competing product or service.
+  4. Use the SysAudit name, logo or branding.
+  5. Remove or alter any copyright, licence or attribution notice.
+
+Forking on GitHub is permitted only to the extent required by the GitHub Terms
+of Service, and confers no additional rights under this notice.
+
+NO WARRANTY
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE MATERIALS OR THEIR USE.
+
+THIRD-PARTY COMPONENTS
+
+This notice covers only material authored for SysAudit. Third-party
+dependencies remain under their own licences; see THIRD_PARTY_NOTICES.md.
+
+PERMISSIONS
+
+Requests for any use beyond the above: https://sysaudit.me — contact form.

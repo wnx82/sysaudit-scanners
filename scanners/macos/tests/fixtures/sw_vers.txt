@@ -1,0 +1,5 @@
+# Sortie de `sw_vers` sur macOS 14.5, relevée dans la documentation Apple et
+# les pages de manuel. Le format « clé:<TAB>valeur » est stable depuis Mac OS X.
+ProductName:		macOS
+ProductVersion:		14.5
+BuildVersion:		23F79

@@ -1,0 +1,35 @@
+# Fins de ligne : LF dans le dépôt, LF à l'extraction, sur toutes les
+# plateformes.
+#
+# Sans ce fichier, Git suivait `core.autocrlf` — vrai par défaut sous Windows —
+# et extrayait en CRLF ce qu'il stocke en LF. Trois conséquences mesurées le
+# 2026-08-28, et aucune ne se voyait sur un poste Linux :
+#
+# - `bash` refuse un script en CRLF. Les six tests de
+#   `scanners/aggregated-metrics.test.ts` échouaient sur `$'\r': command not
+#   found` en sourçant `lib/core/json.sh`, et `npm run ci:local` s'arrêtait là ;
+# - ShellCheck devenait inexploitable : 14 328 de ses 14 418 constats étaient le
+#   retour chariot lui-même, le reste en découlant ;
+# - une archive de la ligne de commande construite sous Windows livrait le
+#   scanner Linux avec `#!/usr/bin/env bash\r`, que `env` cherche comme un
+#   interpréteur nommé « bash\r » — code 127 sur la machine auditée.
+#
+# S'y ajoutait un bruit permanent : vingt-sept fichiers annoncés modifiés par
+# `git status` sans qu'une ligne diffère, ce qui apprend à ne plus lire
+# `git status`.
+#
+# **Une seule convention.** Les `.ps1` ne font pas exception : ils sont déjà
+# stockés en LF, PowerShell les lit ainsi, et leur imposer CRLF créerait une
+# seconde règle à retenir sans rien résoudre.
+* text=auto eol=lf
+
+# Les scripts shell, explicitement : ce sont eux qui cassent, et le dire ici
+# vaut mieux que de le déduire de la règle générale.
+*.sh text eol=lf
+
+# Les binaires, déclarés plutôt que devinés. `text=auto` les reconnaît
+# aujourd'hui à leur contenu ; le déclarer met à l'abri du jour où un asset
+# arrive dans un encodage qui ressemble à du texte.
+*.png binary
+*.webp binary
+*.svg text eol=lf

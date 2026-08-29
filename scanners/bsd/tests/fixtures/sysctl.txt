@@ -1,0 +1,11 @@
+# Valeurs `sysctl -n` relevées dans les pages de manuel FreeBSD 14.
+# `hw.model` y nomme le **processeur**, à l'inverse de macOS où il nomme la
+# machine : c'est précisément le piège que le scanner doit éviter.
+hw.model Intel(R) Xeon(R) CPU E3-1270 v6 @ 3.80GHz
+hw.ncpu 8
+hw.physmem 34359738368
+hw.pagesize 4096
+vm.stats.vm.v_free_count 1048576
+kern.boottime { sec = 1785000000, usec = 0 } Fri Jul 25 15:20:00 2026
+machdep.bootmethod UEFI
+dev.cpu.0.freq 3800

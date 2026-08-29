@@ -1,0 +1,5 @@
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/block/dm-4  2097152  1048576   1048576  50% /
+tmpfs            3953260      848   3952412   1% /dev
+/dev/block/dm-9 115343360 62914560  52428800  55% /data
+/dev/block/dm-9 115343360 62914560  52428800  55% /storage/emulated

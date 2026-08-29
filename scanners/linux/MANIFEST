@@ -1,0 +1,47 @@
+# Fichiers distribuables du scanner Linux, dans l'ordre de chargement.
+#
+# SOURCE DE VÉRITÉ UNIQUE. Trois consommateurs la lisent :
+#
+#   - `sysaudit.sh`, qui charge les fichiers `lib/**.sh` dans cet ordre ;
+#   - l'API, qui n'accepte de servir que les chemins listés ici ;
+#   - le script d'amorçage, qui télécharge exactement ces fichiers.
+#
+# Cette liste était auparavant recopiée à trois endroits : ajouter un
+# collecteur exigeait trois modifications coordonnées, et l'oubli ne cassait
+# rien au build — seulement l'amorçage, sur la machine auditée.
+#
+# `sysaudit.sh` conserve des `source` explicites, que ShellCheck peut suivre ;
+# un test du scanner vérifie qu'ils correspondent exactement à ce fichier.
+#
+# Lignes vides et lignes commençant par `#` ignorées.
+
+sysaudit.sh
+VERSION
+MANIFEST
+
+lib/core/schema-bounds.sh
+lib/core/json.sh
+lib/core/console.sh
+lib/core/progress.sh
+lib/core/core.sh
+lib/core/transport.sh
+lib/core/levels.sh
+lib/core/dependencies.sh
+lib/core/provision.sh
+lib/core/anonymize.sh
+lib/core/capabilities.sh
+
+lib/collectors/system.sh
+lib/collectors/hardware.sh
+lib/collectors/media.sh
+lib/collectors/power.sh
+lib/collectors/storage.sh
+lib/collectors/network.sh
+lib/collectors/security.sh
+lib/collectors/software.sh
+lib/collectors/virtualization.sh
+lib/collectors/stability.sh
+lib/collectors/monitoring.sh
+lib/collectors/benchmark.sh
+
+lib/output/markdown.sh

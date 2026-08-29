@@ -1,0 +1,39 @@
+# Fichiers distribuables du scanner Windows, dans l'ordre de chargement.
+#
+# SOURCE DE VÉRITÉ UNIQUE, sur le modèle du scanner Linux. Trois consommateurs
+# la lisent :
+#
+#   - `sysaudit.ps1`, qui charge les fichiers `lib/**.ps1` dans cet ordre ;
+#   - l'API, qui n'accepte de servir que les chemins listés ici ;
+#   - le script d'amorçage, qui télécharge exactement ces fichiers.
+#
+# `sysaudit.ps1` conserve des `.` (dot-sourcing) explicites : un test vérifie
+# qu'ils correspondent exactement à ce fichier.
+#
+# Lignes vides et lignes commençant par `#` ignorées.
+
+sysaudit.ps1
+VERSION
+MANIFEST
+lib/core/json.ps1
+lib/core/core.ps1
+lib/core/transport.ps1
+lib/core/legacy.ps1
+lib/core/paths.ps1
+lib/core/levels.ps1
+lib/core/provision.ps1
+lib/collectors/system.ps1
+lib/collectors/hardware.ps1
+lib/collectors/media.ps1
+lib/collectors/power.ps1
+lib/collectors/storage.ps1
+lib/collectors/network.ps1
+lib/collectors/security.ps1
+lib/collectors/devices.ps1
+lib/collectors/software.ps1
+lib/collectors/virtualization.ps1
+lib/collectors/events.ps1
+lib/collectors/benchmark.ps1
+lib/collectors/monitoring.ps1
+lib/output/console.ps1
+lib/output/markdown.ps1

@@ -1,0 +1,21 @@
+processor	: 0
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32
+CPU implementer	: 0x41
+processor	: 1
+BogoMIPS	: 38.40
+processor	: 2
+BogoMIPS	: 38.40
+processor	: 3
+BogoMIPS	: 38.40
+processor	: 4
+BogoMIPS	: 38.40
+processor	: 5
+BogoMIPS	: 38.40
+processor	: 6
+BogoMIPS	: 38.40
+processor	: 7
+BogoMIPS	: 38.40
+processor	: 8
+BogoMIPS	: 38.40
+Hardware	: Google Tensor G3

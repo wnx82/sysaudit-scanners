@@ -1,0 +1,8 @@
+Copyright (c) 1992-2024 The FreeBSD Project.
+FreeBSD 14.1-RELEASE releng/14.1-n267679-10e31f0946d8 GENERIC amd64
+CPU: Intel(R) Xeon(R) CPU E3-1270 v6 @ 3.80GHz (3792.10-MHz K8-class CPU)
+ada0: <Samsung SSD 860 EVO 500GB RVT04B6Q> ACS-4 ATA SATA 3.x device
+ahcich2: Timeout on slot 12 port 0
+ada1: FAILURE - READ_DMA48 timed out
+(ada1:ahcich2:0:0:0): Error 5, Retries exhausted
+igb0: link state changed to UP

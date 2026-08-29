@@ -1,0 +1,18 @@
+node_modules
+dist
+coverage
+*.tsbuildinfo
+package-lock.json
+
+# JSON Schema généré depuis la définition Zod.
+packages/report-schema/schema
+
+# Sorties de commandes capturées telles quelles : les reformater les
+# désaccorderait de ce que la commande produit réellement.
+scanners/*/tests/fixtures
+
+# Table de 534 champs générée depuis le schéma Zod (`npm run docs:schema-fields`).
+# Prettier réaligne ses colonnes, ce qui la met aussitôt en dérive vis-à-vis de
+# son générateur : le va-et-vient ne converge jamais. La mise en forme est celle
+# du générateur, et son test de dérive en est le garde-fou.
+docs/format-rapport/REPORT_SCHEMA_FIELDS.md

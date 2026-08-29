@@ -1,0 +1,47 @@
+# === Dépendances ===
+node_modules/
+
+# === Builds ===
+dist/
+*.tsbuildinfo
+coverage/
+
+# JSON Schema généré depuis la définition Zod. Régénéré par `npm run build`.
+packages/report-schema/schema/
+
+# === Secrets / environnement ===
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+google-*.json
+*-credentials.json
+service-account*.json
+
+# === Rapports SysAudit ===
+# Un rapport porte numéros de série, adresses MAC et identifiants matériel :
+# il n'a rien à faire dans un dépôt, et surtout pas dans celui-ci.
+/sysaudit.json
+sysaudit-*.json
+sysaudit-*.md
+sysaudit-*.html
+!**/tests/fixtures/**
+reports/
+
+# === Logs / temporaires ===
+*.log
+logs/
+tmp/
+.cache/
+.DS_Store
+Thumbs.db
+
+# === Éditeurs ===
+.idea/
+.vscode/
+*.swp
+*~

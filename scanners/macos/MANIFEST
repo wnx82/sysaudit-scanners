@@ -1,0 +1,19 @@
+# Fichiers distribuables du scanner macOS expérimental, dans l'ordre de
+# chargement.
+#
+# Même rôle que `scanners/linux/MANIFEST` : source de vérité unique de ce que le
+# scanner charge et de ce qu'un amorçage devrait télécharger.
+#
+# Ce scanner n'est **pas** distribué par l'amorçage : `BOOTSTRAPPABLE_PROFILES`
+# ne le contient pas, et c'est délibéré. Proposer un téléchargement d'un
+# script jamais exécuté sur la plateforme qu'il cible reviendrait à le présenter
+# comme utilisable.
+#
+# Lignes vides et lignes commençant par `#` ignorées.
+
+sysaudit.sh
+VERSION
+MANIFEST
+
+lib/json.sh
+lib/core.sh

@@ -1,0 +1,91 @@
+# CI de la surface publique.
+#
+# Elle ne construit que ce qui est publié : trois paquets purs et cinq
+# scanners. Aucune base de données, aucun navigateur, aucun secret — et c'est
+# la conséquence directe du périmètre, pas une simplification.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Le jeton par défaut ne peut que lire. Aucun job n'a besoin d'écrire.
+permissions:
+  contents: read
+
+jobs:
+  qualite:
+    name: Lint · Typecheck · Test · Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - name: Format
+        run: npm run format:check
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Tests
+        run: npm test
+      - name: Build
+        run: npm run build
+
+  scanner-linux:
+    name: Scanner Linux — ShellCheck et suite
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: ShellCheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          npm run lint:shell
+
+      - run: npm ci
+      - name: Construire le schéma dont la suite dépend
+        run: npm run build --workspace packages/report-schema
+      - name: Suite du scanner
+        run: npm run test:scanner
+
+  scanner-windows:
+    name: Scanner Windows — PSScriptAnalyzer et suite
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - name: Construire le schéma dont la suite dépend
+        run: npm run build --workspace packages/report-schema
+      - name: Suite du scanner
+        shell: pwsh
+        run: npm run test:scanner:windows
