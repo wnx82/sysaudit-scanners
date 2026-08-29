@@ -1,6 +1,6 @@
 {
   "name": "sysaudit",
-  "version": "0.156.0",
+  "version": "0.158.0",
   "private": true,
   "description": "Scanners système et format de rapport SysAudit — composants publiés.",
   "homepage": "https://sysaudit.me",

@@ -14,7 +14,11 @@ versionnement [SemVer](https://semver.org/lang/fr/). Le numéro de version est
 celui de SysAudit dans son ensemble : un dépôt public qui aurait sa propre
 numérotation rendrait impossible de dire quel scanner produit quel rapport.
 
-## [0.156.0] — 2026-08-28
+Ce texte est écrit à la main, mais sa version la plus récente est **vérifiée** :
+la construction de cette surface refuse de produire un dépôt dont le journal
+annoncerait une autre version que celle du `package.json`.
+
+## [0.158.0] — 2026-08-29
 
 Première publication.
 
